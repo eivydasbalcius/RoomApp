@@ -8,11 +8,11 @@ class NotesRepository(private val notesDao: NotesDao) {
 
     val readAllData: LiveData<List<Notes>> = notesDao.readAllData()
 
-    suspend fun addNote(notes: Notes){
+    suspend fun addNote(notes: Notes) {
         notesDao.addNote(notes)
     }
 
-    suspend fun updateNotes(note: Notes){
+    suspend fun updateNotes(note: Notes) {
         notesDao.updateNotes(note)
     }
 

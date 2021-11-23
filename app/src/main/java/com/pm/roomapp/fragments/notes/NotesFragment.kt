@@ -53,7 +53,7 @@ class NotesFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.menu_delete) {
+        if (item.itemId == R.id.menu_delete) {
             deleteAllNotes()
         }
         return super.onOptionsItemSelected(item)
@@ -61,14 +61,15 @@ class NotesFragment : Fragment() {
 
     private fun deleteAllNotes() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes"){ _, _ ->
+        builder.setPositiveButton("Yes") { _, _ ->
             mNotesViewModel.deleteAllNotes()
             Toast.makeText(
                 requireContext(),
                 "Successfully removed everything",
-                Toast.LENGTH_SHORT).show()
+                Toast.LENGTH_SHORT
+            ).show()
         }
-        builder.setNegativeButton("No"){ _, _ -> }
+        builder.setNegativeButton("No") { _, _ -> }
         builder.setTitle("Delete everything?")
         builder.setMessage("Are you sure you want to delete everything?")
         builder.create().show()

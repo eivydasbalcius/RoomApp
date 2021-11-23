@@ -10,7 +10,7 @@ import com.pm.roomapp.model.Notes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class NotesViewModel(application: Application): AndroidViewModel(application) {
+class NotesViewModel(application: Application) : AndroidViewModel(application) {
 
     val readAllData: LiveData<List<Notes>>
     private val repository: NotesRepository

@@ -9,15 +9,18 @@ import com.pm.roomapp.R
 import com.pm.roomapp.model.Notes
 import kotlinx.android.synthetic.main.custom_row.view.*
 
-class NotesAdapter: RecyclerView.Adapter<NotesAdapter.MyViewHolder>() {
+class NotesAdapter : RecyclerView.Adapter<NotesAdapter.MyViewHolder>() {
 
     private var notesList = emptyList<Notes>()
-    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false))
+        return MyViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false)
+        )
     }
 
     override fun getItemCount(): Int {

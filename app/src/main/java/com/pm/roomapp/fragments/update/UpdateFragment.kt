@@ -37,7 +37,6 @@ class UpdateFragment : Fragment() {
         view.update_btn.setOnClickListener {
             updateItem()
         }
-
         //Add menu
         setHasOptionsMenu(true)
 
@@ -49,7 +48,7 @@ class UpdateFragment : Fragment() {
         val title = updateTitle_et.text.toString()
         val note = updateNote_et.text.toString()
 
-        if(inputCheck(name,title, note)) {
+        if (inputCheck(name, title, note)) {
             //Create updated Notes object
             val updatedNotes = Notes(args.currentNote.id, name, title, note)
             //Update current Notes
@@ -57,8 +56,9 @@ class UpdateFragment : Fragment() {
             Toast.makeText(requireContext(), "Updated successfully", Toast.LENGTH_SHORT).show()
             //Navigate back to Notes list fragment
             findNavController().navigate(R.id.action_updateFragment_to_notesFragment)
-        }else {
-            Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT)
+                .show()
         }
 
     }
@@ -72,7 +72,7 @@ class UpdateFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.menu_delete) {
+        if (item.itemId == R.id.menu_delete) {
             deleteNote()
         }
         return super.onOptionsItemSelected(item)
@@ -80,15 +80,16 @@ class UpdateFragment : Fragment() {
 
     private fun deleteNote() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Yes"){ _, _ ->
+        builder.setPositiveButton("Yes") { _, _ ->
             mNotesViewModel.deleteNote(args.currentNote)
             Toast.makeText(
                 requireContext(),
                 "Successfully removed: ${args.currentNote.title}",
-                Toast.LENGTH_SHORT).show()
+                Toast.LENGTH_SHORT
+            ).show()
             findNavController().navigate(R.id.action_updateFragment_to_notesFragment)
         }
-        builder.setNegativeButton("No"){ _, _ -> }
+        builder.setNegativeButton("No") { _, _ -> }
         builder.setTitle("Delete ${args.currentNote.title}?")
         builder.setMessage("Are you sure you want to delete ${args.currentNote.title}?")
         builder.create().show()

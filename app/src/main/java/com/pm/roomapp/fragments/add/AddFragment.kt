@@ -39,7 +39,7 @@ class AddFragment : Fragment() {
         val title = addTitle_et.text.toString()
         val note = addNote_et.text.toString()
 
-        if(inputCheck(name, title, note)) {
+        if (inputCheck(name, title, note)) {
             //Create Note object
             val notes = Notes(0, name, title, note)
             //Add data to Database
@@ -47,7 +47,7 @@ class AddFragment : Fragment() {
             Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
             //Navigate back from Add fragment to Notes fragment
             findNavController().navigate(R.id.action_addFragment_to_notesFragment)
-        }else {
+        } else {
             Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_LONG).show()
         }
     }
