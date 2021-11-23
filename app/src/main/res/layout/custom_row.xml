@@ -28,7 +28,7 @@
         android:layout_height="57dp"
         android:layout_marginTop="24dp"
         android:textSize="20sp"
-        android:text="Cia yra testas notes kurios as bandau istestuot"
+        android:text="This is a test note"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

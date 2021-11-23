@@ -30,7 +30,7 @@ class NotesAdapter: RecyclerView.Adapter<NotesAdapter.MyViewHolder>() {
         holder.itemView.title_txt.text = currentItem.title
         holder.itemView.note_txt.text = currentItem.note
 
-        holder.itemView.setOnClickListener {
+        holder.itemView.rowLayout.setOnClickListener {
             val action = NotesFragmentDirections.actionNotesFragmentToUpdateFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
 

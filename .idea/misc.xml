@@ -4,11 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/domki/AndroidStudioProjects/RoomApp/app/src/main/res/drawable/ic_add.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/domki/AndroidStudioProjects/RoomApp/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.14322916666666666" />
         <entry key="..\:/Users/domki/AndroidStudioProjects/RoomApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/domki/AndroidStudioProjects/RoomApp/app/src/main/res/layout/custom_row.xml" value="0.2" />
         <entry key="..\:/Users/domki/AndroidStudioProjects/RoomApp/app/src/main/res/layout/fragment_add.xml" value="0.2" />
         <entry key="..\:/Users/domki/AndroidStudioProjects/RoomApp/app/src/main/res/layout/fragment_notes.xml" value="0.25" />
         <entry key="..\:/Users/domki/AndroidStudioProjects/RoomApp/app/src/main/res/layout/fragment_update.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/domki/AndroidStudioProjects/RoomApp/app/src/main/res/menu/delete_menu.xml" value="0.12708333333333333" />
       </map>
     </option>
   </component>

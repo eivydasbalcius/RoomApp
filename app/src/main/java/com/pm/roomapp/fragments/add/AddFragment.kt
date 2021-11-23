@@ -31,8 +31,6 @@ class AddFragment : Fragment() {
         view.add_btn.setOnClickListener {
             insertDataToDatabase()
         }
-
-
         return view
     }
 
@@ -49,7 +47,7 @@ class AddFragment : Fragment() {
             Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
             //Navigate back from Add fragment to Notes fragment
             findNavController().navigate(R.id.action_addFragment_to_notesFragment)
-        } else {
+        }else {
             Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_LONG).show()
         }
     }
