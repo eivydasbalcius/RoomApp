@@ -39,20 +39,12 @@ class AddFragment : Fragment() {
         val title = addTitle_et.text.toString()
         val note = addNote_et.text.toString()
 
-        if (inputCheck(name, title, note)) {
-            //Create Note object
-            val notes = Notes(0, name, title, note)
-            //Add data to Database
-            mNotesViewModel.addNote(notes)
-            Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
-            //Navigate back from Add fragment to Notes fragment
-            findNavController().navigate(R.id.action_addFragment_to_notesFragment)
-        } else {
-            Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    private fun inputCheck(name: String, title: String, notes: String): Boolean {
-        return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(title) && TextUtils.isEmpty(notes))
+        //Create Note object
+        val notes = Notes(0, name, title, note)
+        //Add data to Database
+        mNotesViewModel.addNote(notes)
+        Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
+        //Navigate back from Add fragment to Notes fragment
+        findNavController().navigate(R.id.action_addFragment_to_notesFragment)
     }
 }

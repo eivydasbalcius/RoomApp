@@ -48,23 +48,13 @@ class UpdateFragment : Fragment() {
         val title = updateTitle_et.text.toString()
         val note = updateNote_et.text.toString()
 
-        if (inputCheck(name, title, note)) {
-            //Create updated Notes object
-            val updatedNotes = Notes(args.currentNote.id, name, title, note)
-            //Update current Notes
-            mNotesViewModel.updateNotes(updatedNotes)
-            Toast.makeText(requireContext(), "Updated successfully", Toast.LENGTH_SHORT).show()
-            //Navigate back to Notes list fragment
-            findNavController().navigate(R.id.action_updateFragment_to_notesFragment)
-        } else {
-            Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT)
-                .show()
-        }
-
-    }
-
-    private fun inputCheck(name: String, title: String, note: String): Boolean {
-        return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(title) && TextUtils.isEmpty(note))
+        //Create updated Notes object
+        val updatedNotes = Notes(args.currentNote.id, name, title, note)
+        //Update current Notes
+        mNotesViewModel.updateNotes(updatedNotes)
+        Toast.makeText(requireContext(), "Updated successfully", Toast.LENGTH_SHORT).show()
+        //Navigate back to Notes list fragment
+        findNavController().navigate(R.id.action_updateFragment_to_notesFragment)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
