@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/notesFragment">
+    app:startDestination="@id/userLoginFragment2">
 
     <fragment
         android:id="@+id/notesFragment"
@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_notesFragment_to_updateFragment"
             app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_notesFragment_to_userLoginFragment2"
+            app:destination="@id/userLoginFragment2" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
@@ -37,5 +40,14 @@
         <argument
             android:name="currentNote"
             app:argType="com.pm.roomapp.model.Notes" />
+    </fragment>
+    <fragment
+        android:id="@+id/userLoginFragment2"
+        android:name="com.pm.roomapp.fragments.login.UserLoginFragment"
+        android:label="fragment_user_login"
+        tools:layout="@layout/fragment_user_login" >
+        <action
+            android:id="@+id/action_userLoginFragment2_to_notesFragment"
+            app:destination="@id/notesFragment" />
     </fragment>
 </navigation>
