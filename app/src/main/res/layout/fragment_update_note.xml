@@ -3,15 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.add.AddFragment">
+    tools:context=".fragments.update.UpdateNoteFragment">
 
-    <include
-        android:id="@+id/llProgressBar"
-        layout="@layout/progressbar"
-        android:visibility="gone" />
 
     <LinearLayout
-        android:id="@+id/ll_main_layout_add_report"
+        android:id="@+id/ll_main_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="left"
@@ -25,7 +21,7 @@
             android:textSize="25dp" />
 
         <EditText
-            android:id="@+id/add_notes_title"
+            android:id="@+id/update_notes_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -37,7 +33,7 @@
             android:textSize="25dp" />
 
         <EditText
-            android:id="@+id/add_notes_description"
+            android:id="@+id/update_notes_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

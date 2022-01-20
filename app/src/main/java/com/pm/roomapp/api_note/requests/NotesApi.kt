@@ -14,6 +14,7 @@ interface NotesApi {
     fun createNote(
         @Header("Authorization") token: String,
         @Field("users_id") users_id: String?,
+        @Field("title") title: String,
         @Field("description") description: String
     ): Call<NotesDto>
 
@@ -22,6 +23,7 @@ interface NotesApi {
     fun updateNote(
         @Header("Authorization") token: String,
         @Field("id") id: Int,
+        @Field("title") title: String,
         @Field("description") description: String
     ): Call<NotesDto>
 

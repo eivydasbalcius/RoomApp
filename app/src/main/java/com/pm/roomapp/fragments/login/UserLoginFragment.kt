@@ -60,7 +60,7 @@ class UserLoginFragment : Fragment() {
 
                     if (userDto.status == "OK") {
                         setUserSettings(userDto)
-                        findNavController().navigate(R.id.action_userLoginFragment2_to_notesFragment)
+                        findNavController().navigate(R.id.action_userLoginFragment2_to_notesListFragment)
                         Toast.makeText(requireContext(), getString(R.string.hello) + " " + userDto.user.first().name, Toast.LENGTH_LONG).show()
                     } else {
                         Toast.makeText(requireContext(), getString(resources.getIdentifier(userDto.message, "string",

@@ -26,7 +26,7 @@
     <string name="error_something_went_wrong">Ups! Something went wrong. Please try again.</string>
     <string name="fill_username_and_password">Please fill username and password!</string>
     <string name="reports_list">Reports</string>
-    <string name="ony_edit_your_reports">Ups! You can only update or delete your notes.</string>
+    <string name="ony_edit_your_notes">Ups! You can only update or delete your notes.</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="hello">Hello</string>
@@ -35,7 +35,7 @@
     <string name="refresh">Refresh</string>
     <string name="add_report">New report</string>
     <string name="update_report">Update report</string>
-    <string name="fill_title_and_description">Please fill title and description!</string>
+    <string name="fill_description">Please fill title and description!</string>
     <string name="successfull_added_new_report">Report has been successfully added!</string>
     <string name="delete_report">Delete report</string>
     <string name="question_delete_report">Are you sure you want delete this report?</string>
